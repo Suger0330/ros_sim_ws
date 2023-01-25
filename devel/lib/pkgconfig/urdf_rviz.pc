@@ -1,0 +1,8 @@
+prefix=/home/lxm/ros_sim_ws/devel
+
+Name: urdf_rviz
+Description: Description of urdf_rviz
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

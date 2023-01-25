@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lxm/commun_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/lxm/demo01_ws/src/helloworld/include/**",
+        "/home/lxm/commun_ws/src/launch01_basic/include/**",
+        "/home/lxm/commun_ws/src/plum_apis/include/**",
+        "/home/lxm/commun_ws/src/plum_head/include/**",
+        "/home/lxm/commun_ws/src/plum_head_src/include/**",
+        "/home/lxm/commun_ws/src/plum_param_server/include/**",
+        "/home/lxm/commun_ws/src/plum_pub_sub/include/**",
+        "/home/lxm/commun_ws/src/plum_server_client/include/**",
+        "/home/lxm/commun_ws/src/plum_test/include/**",
+        "/home/lxm/commun_ws/src/rename01_node/include/**",
+        "/home/lxm/commun_ws/src/rename02_topic/include/**",
+        "/home/lxm/commun_ws/src/rename03_param/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
