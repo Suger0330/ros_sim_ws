@@ -1,0 +1,59 @@
+<!--需求:设置机器人底盘，并添加摄像头 -->
+<robot name="Car" >
+    <!-- 添加一个尺寸极小的link,再去关联初始link与base_link,关节的高度刚好和base_link
+         下沉的高度一致(半个底盘的高度) -->
+    <link name="base_footprint" >
+        <visual>
+            <geometry>
+                <box size="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+    </link>
+    <!-- 1.底盘link -->
+    <link name="base_link" >
+        <visual>
+            <geometry>
+                <box size="2.0 1.0 0.5" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="car_color" >
+                <color rgba="1 0.5 0 0.5" />
+            </material>
+        </visual>
+    </link>
+    <!-- 2.摄像头link -->
+    <link name="camera" >
+        <visual>
+            <geometry>
+                <box size="0.15 0.25 0.25" />
+            </geometry>
+            <!-- 先使用默认(后期需要修改) -->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="camera_color" >
+                <color rgba="0 0.5 0 1" />
+            </material>
+        </visual>
+    </link>
+    <!--关联base footprint 与base link -->
+    <joint name="link2footprint" type="fixed" >
+        <!-- 父级link -->
+        <parent link="base_footprint" />
+        <!-- 子级link -->
+        <child link="base_link" />
+        <!-- 设置偏移量 --> 
+        <origin xyz="0 0 0.25" rpy="0 0 0" />
+    </joint>
+
+    <!-- 3.关节-->
+    <joint name="camera2base_link" type="continuous" >
+        <!-- 父级link -->
+        <parent link="base_link" />
+        <!-- 子级link -->
+        <child link="camera" />
+        <!-- 设置偏移量 -->
+        <origin xyz="0.825 0 0.375" rpy="0 0 0" />
+        <!-- 设置关节旋转参考的坐标轴 -->
+        <axis xyz="0 0 1" />
+    </joint>
+
+</robot>

@@ -1,0 +1,6 @@
+<robot name="mysum" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!-- 演示文件包含 -->
+    <xacro:include filename="demo02_field.xacro" />
+    <xacro:include filename="demo03_macro.xacro" />
+
+</robot>
